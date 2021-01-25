@@ -4,7 +4,7 @@ from os.path import basename
 from subprocess import call
 
 
-with ZipFile('server spigot 1.16.4.zip', 'r') as file:
+with ZipFile('MCServer.zip', 'r') as file:
     file.extractall()
 
 call('server\serverrun.bat')
@@ -24,6 +24,11 @@ with ZipFile('MCServer.zip', 'w') as zipObj:
             # Add file to zip
             zipObj.write(filePath)
 
-    #zipObj.write('McStartend.exe')
+    zipObj.write('MCStartEnd.exe')
+
+if os.path.exists("server") and os.path.exists("MCStartEnd.exe"):
+  os.remove("server")
+  os.remove("MCStartEnd.exr")
+
 
 
