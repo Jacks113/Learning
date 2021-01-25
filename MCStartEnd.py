@@ -26,9 +26,5 @@ with ZipFile('MCServer.zip', 'w') as zipObj:
 
     zipObj.write('MCStartEnd.exe')
 
-if os.path.exists("server") and os.path.exists("MCStartEnd.exe"):
-  os.remove("server")
-  os.remove("MCStartEnd.exr")
-
 
 
